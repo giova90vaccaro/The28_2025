@@ -3,7 +3,6 @@
     width: 100vw;
     height: 100vh;
     border: 1px solid rgba(0, 0, 0, 0.5);
-
   }
 
   .example-sidenav-content {
@@ -25,14 +24,16 @@
     margin-top: 1vh;
     margin-left: 5vw;
   }
+  table{
 
+    width: 100%;
+  }
 }
 @media screen and (max-width: 751px){
   .example-container {
     width: 100vw;
     height: 100vh;
     border: 1px solid rgba(0, 0, 0, 0.5);
-
   }
 
   .example-sidenav-content {

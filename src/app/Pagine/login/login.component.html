@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title><p class="fs-1">Login</p></mat-card-title>
+    <mat-card-title>
+      <img >
+    </mat-card-title>
+  
+      <mat-card-content>
+  
+        <div class="container">
+          <div class="row">
+            <div class="col" >
+              <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>User</mat-label>
+                <input matInput #user>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" #psw passwordToggle required>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button matFab extended style="width: 100%;" (click)="login(user.value, psw.value)">Entra</button>
+            </div>
+          </div>
+        </div>
+    </mat-card-content>
+  </mat-card>

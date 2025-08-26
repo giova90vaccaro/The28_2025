@@ -1,0 +1,66 @@
+
+<mat-card style="margin-left: 5vw; margin-right: 5vw;margin-bottom: 2vh; margin-top:4vh">
+  <mat-card-title>Incasso </mat-card-title>
+  <mat-card-subtitle>del Giorno</mat-card-subtitle>
+  <mat-card-content style="text-align: center; font-size: xx-large;">
+    {{incasso.TotaleIncasso}} €
+  </mat-card-content>
+</mat-card>
+
+<mat-card style="margin-left: 5vw; margin-right: 5vw;margin-bottom: 2vw;">
+  <mat-card-title>Sconti </mat-card-title>
+  <mat-card-subtitle>del Giorno</mat-card-subtitle>
+  <mat-card-content style="text-align: center; font-size: xx-large;">
+   {{incasso.TotaleSconti}} €
+  </mat-card-content>
+</mat-card>
+<mat-card style="margin-left: 5vw; margin-right: 5vw;margin-bottom: 2vw;">
+  <mat-card-title>Ordini </mat-card-title>
+  <mat-card-subtitle>del Giorno</mat-card-subtitle>
+  <mat-card-content style="text-align: center; font-size: xx-large;">
+   {{incasso.Ordini}}
+  </mat-card-content>
+</mat-card>
+<mat-card style="margin-left: 5vw; margin-right: 5vw;margin-bottom: 2vw;">
+  <mat-card-title>Bicchieri </mat-card-title>
+  <mat-card-subtitle>del Giorno</mat-card-subtitle>
+  <mat-card-content style="text-align: center; font-size: xx-large;">
+    {{incasso.Bicchieri}}
+  </mat-card-content>
+</mat-card>
+
+<mat-card style="margin-left: 5vw; margin-right: 5vw;margin-bottom: 2vw;">
+<mat-card-title>Classifica Vendite</mat-card-title>
+<mat-card-subtitle>del Giorno</mat-card-subtitle>
+<mat-card-content>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="Categoria">
+    <th mat-header-cell *matHeaderCellDef> Categoria </th>
+    <td mat-cell *matCellDef="let element"> {{element.Categoria}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Prodotto">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.Prodotto}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="Qta">
+    <th mat-header-cell *matHeaderCellDef> Qta </th>
+    <td mat-cell *matCellDef="let element"> {{element.Qta}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="Perc">
+    <th mat-header-cell *matHeaderCellDef> % </th>
+    <td mat-cell *matCellDef="let element"> {{element.Perc}} % </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</mat-card-content>
+</mat-card>

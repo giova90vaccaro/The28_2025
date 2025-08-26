@@ -1,0 +1,59 @@
+@media screen and (min-width: 751px){
+table{
+
+  width: 100%;
+}
+google-chart.pie{
+  width: 40vw;
+  height: 20vh;
+
+}
+google-chart.pier{
+  width: 40vw;
+  height: 20vh;
+
+}
+google-chart.ist{
+  width: 43vw;
+  height: 14.5vh;
+
+}
+.container{
+ margin-top: 4vh; margin-left: 3vw;justify-content: center; width: 90vw; margin-right: 5vw;float: left;margin-bottom: 2vw;
+}
+.card{
+  width: 15.3vw; margin-bottom: 2vh; float: left;
+}
+.grafico{
+  margin-bottom: 2vh; width: 41vw; float: left;
+}
+}@media screen and (max-width: 751px){
+  table{
+
+    width: 80%;
+  }
+  google-chart.pie{
+    width: 80vw;
+    height: 20vh;
+
+  }
+  google-chart.pier{
+    width: 80vw;
+    height: 20vh;
+
+  }
+  google-chart.ist{
+    width: 43vw;
+    height: 14.5vh;
+
+  }
+  .grafico{
+    margin-bottom: 2vh; width: 100vw;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .card{
+    width: 98vw;
+  }
+
+}
