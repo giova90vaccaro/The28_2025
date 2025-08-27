@@ -19,8 +19,9 @@ export class LoginComponent {
 
   private readonly platformId = inject(PLATFORM_ID);
 
-
- auth!:any;
+  private url_call= "https://newdatasystem.myftp.biz/"
+  //private url_call= "http://192.168.1.254:8080/"
+  auth!:any;
   durationInSeconds = 5;
   authRout=false;
   encPassword!: string;
@@ -38,7 +39,7 @@ export class LoginComponent {
       const body = this.x.setUsers(i, p);
       console.log(body)
       const httpOptions = {headers: new HttpHeaders({'Content-Type':  'application/json'})}
-      this.api.post("http://192.168.1.254:8080/External/Authentication/Authpage.php", body).subscribe(
+      this.api.post(this.url_call+"External/Authentication/Authpage.php", body).subscribe(
         data=>{
           resp = data;
             if(resp['stato'] == 'OK'){
