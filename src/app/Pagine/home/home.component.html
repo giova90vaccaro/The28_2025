@@ -29,6 +29,8 @@
   </mat-card-content>
 </mat-card>
 
+
+
 <mat-card style="margin-left: 5vw; margin-right: 5vw;margin-bottom: 2vw;">
 <mat-card-title>Classifica Vendite</mat-card-title>
 <mat-card-subtitle>del Giorno</mat-card-subtitle>
@@ -41,19 +43,16 @@
     <td mat-cell *matCellDef="let element"> {{element.Categoria}} </td>
   </ng-container>
 
-  <!-- Name Column -->
   <ng-container matColumnDef="Prodotto">
     <th mat-header-cell *matHeaderCellDef> Name </th>
     <td mat-cell *matCellDef="let element"> {{element.Prodotto}} </td>
   </ng-container>
 
-  <!-- Weight Column -->
   <ng-container matColumnDef="Qta">
     <th mat-header-cell *matHeaderCellDef> Qta </th>
     <td mat-cell *matCellDef="let element"> {{element.Qta}} </td>
   </ng-container>
 
-  <!-- Symbol Column -->
   <ng-container matColumnDef="Perc">
     <th mat-header-cell *matHeaderCellDef> % </th>
     <td mat-cell *matCellDef="let element"> {{element.Perc}} % </td>
