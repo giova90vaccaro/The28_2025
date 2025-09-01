@@ -13,8 +13,8 @@
 
   </mat-form-field>
   <br><br>
-<!--
-<mat-card *ngIf="show3" class="grafico">
+@if (show3) {
+  <mat-card class="grafico">
   <mat-card-title>Categoria</mat-card-title>
   <mat-card-content>
     <google-chart
@@ -29,7 +29,9 @@
   </google-chart>
 </mat-card-content>
 </mat-card>
-<mat-card *ngIf="show4" class="grafico">
+}
+@if (show4) {
+<mat-card  class="grafico">
   <mat-card-title>Fascia Oraria</mat-card-title>
   <mat-card-content>
   <google-chart
@@ -43,8 +45,9 @@
     [dynamicResize]="true">
   </google-chart>
   </mat-card-content>
+  </mat-card>
+}
 
--->
 
 @if (show && ValoriPermessi()) {
     <mat-card class="card">

@@ -11,10 +11,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTableModule } from '@angular/material/table';
 
+import { ChartType, GoogleChartsModule } from 'angular-google-charts';
+
 
 @Component({
   selector: 'app-vendite',
-  imports: [DecimalPipe,MatTableModule,MatCardModule,MatDatepickerModule,MatFormFieldModule,MatProgressBarModule,FormsModule,ReactiveFormsModule],
+  imports: [DecimalPipe,MatTableModule,GoogleChartsModule,MatCardModule,MatDatepickerModule,MatFormFieldModule,MatProgressBarModule,FormsModule,ReactiveFormsModule],
   providers:[provideNativeDateAdapter()],
   templateUrl: './vendite.component.html',
   styleUrl: './vendite.component.css'
@@ -105,7 +107,7 @@ export class VenditeComponent {
         for(i=0; i<this.mese11.length; i++){
           var aux = [this.mese11[i].Categoria, Number(this.mese11[i].Qta) ]
           this.righe3.push(aux)
-        }/*
+        }
         this.title3= 'Fascia Oraria'
         this.type3= ChartType.Bar
         this.columns3 = "categoria";
@@ -116,7 +118,7 @@ export class VenditeComponent {
             title: "Andamento FasciaOraria da",
             subtitle: 'Totale Scontrinato - Numero di Pezzi'
           }
-        }*/
+        }
         this.show3 = true;
       })
 
@@ -131,7 +133,7 @@ export class VenditeComponent {
                 var aux = [this.for[i].Hour, Number(this.for[i].Conti),  Number(this.for[i].Pezzi)]
                 this.righe4.push(aux)
               }
-              /*
+              
               this.title4= 'Fascia Oraria'
               this.type4= ChartType.Bar
 
@@ -141,7 +143,7 @@ export class VenditeComponent {
                   title: "Andamento FasciaOraria da",
                   subtitle: 'Totale Scontrinato - Numero di Pezzi'
                 }
-              }*/
+              }
             this.show4=true;
           }
         )
