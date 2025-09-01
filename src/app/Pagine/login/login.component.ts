@@ -19,7 +19,7 @@ export class LoginComponent {
 
   private readonly platformId = inject(PLATFORM_ID);
 
-  private url_call= "https://newdatasystem.myftp.biz/"
+  //private url_call= "https://newdatasystem.myftp.biz/"
   //private url_call= "http://192.168.1.254:8080/"
   auth!:any;
   durationInSeconds = 5;
