@@ -136,7 +136,7 @@
     
  
 
-    @if (!ValoriPermessi()) {
+  
   <table *ngIf="" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <ng-container matColumnDef="Categoria">
@@ -167,7 +167,7 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumnsDue"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumnsDue;"></tr>
   </table>
-  }
+  
 
 </mat-card-content>
 }
